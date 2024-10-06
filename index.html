@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Yes or No</title>
+<style>
+body {
+  font-family: "Impact", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+
+#question {
+  font-size: 2em;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #333;
+}
+
+#result {
+  font-size: 20em;
+  line-height: 0.9;
+  color: black;
+  font-weight: bolder;
+}
+
+#policy-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #eee;
+  cursor: pointer;
+  font-size: 0.8em;
+}
+</style>
+</head>
+<body>
+
+<div id="question">The answer is:</div>
+<div id="result"></div>
+
+<button id="policy-button">Terms & Policy</button>
+
+<script>
+  const resultElement = document.getElementById("result");
+  const randomNumber = Math.random();
+  const result = randomNumber < 0.5 ? "Yes" : "No";
+  resultElement.textContent = result;
+
+  const policyButton = document.getElementById("policy-button");
+
+  policyButton.addEventListener("click", () => {
+    alert("Why would you think this website even has a policy?");
+  });
+</script>
+
+</body>
+</html>
